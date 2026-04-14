@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helper Guide · Trusted Govt Service Help</title>
+  <meta name="description" content="Step-by-step guides for Aadhaar, PAN, Driving Licence, Passport. Updated official links and tools.">
+  <meta name="keywords" content="Aadhaar update, PAN card apply, driving licence online, passport renewal">
+  <meta property="og:title" content="Helper Guide">
+  <meta property="og:description" content="Easy government service guides.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a4b5e">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb"><a href="index.html">Home</a></div>
+  <h1 data-en="Helper Guide" data-hi="हेल्पर गाइड">Helper Guide</h1>
+  <p style="font-size:1.2rem;" data-en="Step‑by‑step help for Indian government services." data-hi="भारतीय सरकारी सेवाओं के लिए स्टेप-बाय-स्टेप सहायता।">Step‑by‑step help for Indian government services.</p>
+  <div class="disclaimer">
+    <i class="fas fa-info-circle"></i> 
+    <span data-en="Disclaimer: This is not an official government website. We provide guides and redirect to official portals." data-hi="अस्वीकरण: यह कोई आधिकारिक सरकारी वेबसाइट नहीं है। हम गाइड प्रदान करते हैं और आधिकारिक पोर्टल पर रीडायरेक्ट करते हैं।">Disclaimer: This is not an official government website. We provide guides and redirect to official portals.</span>
+  </div>
+  <div style="margin:20px 0;">
+    <input type="text" id="serviceFilterInput" placeholder="🔍 Filter services (e.g. Aadhaar, PAN)..." style="width:100%; padding:14px 20px; border-radius:40px; border:1px solid #d7e3ea; font-size:1rem;">
+  </div>
+  <h2 data-en="📌 Most Used Services" data-hi="📌 सबसे ज्यादा उपयोग की जाने वाली सेवाएं">📌 Most Used Services</h2>
+  <div class="service-grid">
+    <div class="service-card" onclick="location.href='aadhaar-guide.html'"><h3>📇 <span data-en="Aadhaar" data-hi="आधार">Aadhaar</span></h3><p data-en="Update / Download" data-hi="अपडेट / डाउनलोड">Update / Download</p><span class="status available" data-en="✅ Available" data-hi="✅ उपलब्ध">✅ Available</span></div>
+    <div class="service-card" onclick="location.href='pan-guide.html'"><h3>🆔 <span data-en="PAN Card" data-hi="पैन कार्ड">PAN Card</span></h3><p data-en="Apply / Correction" data-hi="आवेदन / सुधार">Apply / Correction</p><span class="status available" data-en="✅ Available" data-hi="✅ उपलब्ध">✅ Available</span></div>
+    <div class="service-card" onclick="location.href='driving-licence.html'"><h3>🚗 <span data-en="Driving Licence" data-hi="ड्राइविंग लाइसेंस">Driving Licence</span></h3><p data-en="Apply / Renew" data-hi="आवेदन / नवीनीकरण">Apply / Renew</p><span class="status available" data-en="✅ Available" data-hi="✅ उपलब्ध">✅ Available</span></div>
+    <div class="service-card" onclick="location.href='passport.html'"><h3>🛂 <span data-en="Passport" data-hi="पासपोर्ट">Passport</span></h3><p data-en="Fresh / Renewal" data-hi="नया / नवीनीकरण">Fresh / Renewal</p><span class="status available" data-en="✅ Available" data-hi="✅ उपलब्ध">✅ Available</span></div>
+    <div class="service-card" onclick="location.href='status-check.html'"><h3>🔍 <span data-en="Track Status" data-hi="स्टेटस ट्रैक करें">Track Status</span></h3><p data-en="Aadhaar, PAN, Passport" data-hi="आधार, पैन, पासपोर्ट">Aadhaar, PAN, Passport</p><span class="status available" data-en="✅ Available" data-hi="✅ उपलब्ध">✅ Available</span></div>
+  </div>
+  <button class="share-btn" id="sharePageBtn"><i class="fas fa-share-alt"></i> <span data-en="Share This Page" data-hi="पेज शेयर करें">Share This Page</span></button>
+</div>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script defer src="js/script.js"></script>
+<script defer src="js/search.js"></script>
+<script defer src="js/analytics.js"></script>
+</body>
+</html>
