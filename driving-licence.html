@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driving Licence Guide · Helper Guide</title>
+  <meta name="description" content="Apply for new driving licence or renew online via Parivahan. Complete guide.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-service="Driving Licence" data-steps="6" data-storage-key="dl-progress" data-checklist-key="dl-checklist">
+<div class="container">
+  <div class="breadcrumb"><a href="index.html">Home</a> &gt; <span>Driving Licence</span></div>
+  <h2>🚗 Driving Licence – Apply & Renew</h2>
+  <div class="disclaimer"><i class="fas fa-info-circle"></i> Not affiliated with Parivahan. Guidance only.</div>
+  <div class="progress-container"><div class="progress-bar" style="width:0%"></div></div>
+  <div class="guide-step">
+    <h3>✅ Steps for New Driving Licence</h3>
+    <div class="step-item"><input type="checkbox" class="step-checkbox"> 1. Visit Parivahan Sewa: parivahan.gov.in</div>
+    <div class="step-item"><input type="checkbox" class="step-checkbox"> 2. Select state and apply for Learner's Licence.</div>
+    <div class="step-item"><input type="checkbox" class="step-checkbox"> 3. Fill Form 2, upload docs, book test slot.</div>
+    <div class="step-item"><input type="checkbox" class="step-checkbox"> 4. Pass online test (LL issued).</div>
+    <div class="step-item"><input type="checkbox" class="step-checkbox"> 5. After 30 days, book driving test slot.</div>
+    <div class="step-item"><input type="checkbox" class="step-checkbox"> 6. Pass test, receive permanent DL.</div>
+  </div>
+  <h3>📑 Document Checklist</h3>
+  <div id="docChecklist">
+    <div class="checklist-item"><input type="checkbox"> Age Proof (10th Marksheet/Birth Certificate)</div>
+    <div class="checklist-item"><input type="checkbox"> Address Proof (Aadhaar/Voter ID/Utility Bill)</div>
+    <div class="checklist-item"><input type="checkbox"> Passport size photos</div>
+    <div class="checklist-item"><input type="checkbox"> Form 1 (Medical Certificate if applicable)</div>
+  </div>
+  <div style="display:flex; gap:12px; flex-wrap:wrap; margin:28px 0;">
+    <button class="btn" id="printGuideBtn">Print</button>
+    <button class="btn" id="pdfDownloadBtn">PDF</button>
+    <button class="btn btn-outline" id="voiceGuideBtn">Listen</button>
+    <button class="btn btn-outline" id="shareGuideBtn">Share</button>
+  </div>
+</div>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script defer src="js/script.js"></script>
+<script defer src="js/analytics.js"></script>
+</body>
+</html>
