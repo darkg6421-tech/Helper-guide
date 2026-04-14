@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Application Status · Helper Guide</title>
+  <meta name="description" content="Track Aadhaar update, PAN application, Passport status using official portals.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb"><a href="index.html">Home</a> &gt; <span>Track Status</span></div>
+  <h2>🔍 Track Your Application</h2>
+  <div class="tracker-box">
+    <div class="tracker-input">
+      <label>Select Service</label>
+      <select id="serviceType">
+        <option value="aadhaar">Aadhaar Update</option>
+        <option value="pan">PAN Card</option>
+        <option value="passport">Passport</option>
+        <option value="dl">Driving Licence</option>
+      </select>
+    </div>
+    <div class="tracker-input">
+      <label>Enter Reference Number (optional)</label>
+      <input type="text" id="refNumber" placeholder="e.g. SRN / Acknowledgement">
+    </div>
+    <button class="btn" id="trackBtn" style="width:100%;"><i class="fas fa-external-link-alt"></i> Go to Official Tracker</button>
+    <p style="margin-top:20px; font-size:0.9rem;"><i class="fas fa-info-circle"></i> You will be redirected to the official government portal.</p>
+  </div>
+</div>
+<script src="js/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const trackBtn=document.getElementById('trackBtn');
+  const serviceSelect=document.getElementById('serviceType');
+  const refInput=document.getElementById('refNumber');
+  const urls={
+    aadhaar:'https://myaadhaar.uidai.gov.in/checkAadhaarStatus',
+    pan:'https://tin.tin.nsdl.com/pantan/StatusTrack.html',
+    passport:'https://portal2.passportindia.gov.in/AppOnlineProject/statusTracker/trackStatusForFileNo',
+    dl:'https://parivahan.gov.in/parivahan/en/content/driving-licence-0'
+  };
+  trackBtn.addEventListener('click',()=>{
+    const service=serviceSelect.value;
+    const ref=refInput.value.trim();
+    let url=urls[service];
+    if(ref){
+      if(service==='aadhaar')url+=`?srn=${encodeURIComponent(ref)}`;
+      else if(service==='pan')url+=`?ackno=${encodeURIComponent(ref)}`;
+      else if(service==='passport')url+=`?fileNo=${encodeURIComponent(ref)}`;
+    }
+    window.open(url,'_blank');
+  });
+});
+</script>
+<script defer src="js/analytics.js"></script>
+</body>
+</html>
